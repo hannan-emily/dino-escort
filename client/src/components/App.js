@@ -34,7 +34,7 @@ var dinos = {
    dino2:{
     name: "Oxalaia Quilombensis",
     category: "land",
-    img_path: "../img/dino-oxalaia.png",
+    img_path: dino2img,
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "15",
@@ -44,7 +44,7 @@ var dinos = {
    dino3:{
     name: "Spinosaurus Aegyptiacus",
     category: "land",
-    img_path: "../img/dino-spinosaurs.png",
+    img_path: dino3img,
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "30",
@@ -54,7 +54,7 @@ var dinos = {
    dino4:{
     name: "Nyctosaurus",
     category: "air",
-    img_path: "../img/dino-nyctosaurus.png",
+    img_path: dino4img,
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "1",
@@ -64,7 +64,7 @@ var dinos = {
    dino5:{
     name: "Pterodaustro",
     category: "air",
-    img_path: "../img/dino-pterodaustro.png",
+    img_path: dino5img,
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "2",
@@ -74,7 +74,7 @@ var dinos = {
    dino6:{
     name: "Pteranodon",
     category: "air",
-    img_path: "../img/dino-pteranodon.png",
+    img_path: dino6img,
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "2",
@@ -84,7 +84,7 @@ var dinos = {
    dino7:{
     name: "Shastasaurus Pacificus",
     category: "water",
-    img_path: "../img/dino-shastasaurus.png",
+    img_path: dino7img,
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "100",
@@ -94,7 +94,7 @@ var dinos = {
    dino8:{
     name: "Opthalmusarus Iceniucs",
     category: "water",
-    img_path: "../img/dino-opthalmusaurus.png",
+    img_path: dino8img,
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "20",
@@ -104,7 +104,7 @@ var dinos = {
    dino9:{
     name: "Mosasaurs Hoffmannii",
     category: "water",
-    img_path: "../img/dino-mosasurus.png",
+    img_path: dino9img,
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "7",
@@ -167,6 +167,12 @@ class App extends Component {
       current: dinos.dino
     })
   }
+  handleDinoToCart = (e, dino) =>{
+    e.preventDefault()
+    this.setState({
+      cart:[...this.state.cart, dino]
+    })
+  }
 
   render() {
     let theUser = this.state.user
@@ -187,7 +193,11 @@ class App extends Component {
                   detailClick={this.handleDetailClick}
                 />)}
               />
-              <Route path='/cart' component={Cart} />
+              <Route path='/cart' component={()=> (
+                <Cart
+                  cart={this.state.cart}
+                />)}
+              />
               <Route path='/detail' component={()=> (
                 <Details
                   dino={this.state.current}
