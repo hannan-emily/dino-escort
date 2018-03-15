@@ -18,7 +18,7 @@ var dinos = {
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "5",
     cost_hourly: "$50"
-  }
+  },
 
    dino2:{
     name: "Oxalaia Quilombensis",
@@ -28,7 +28,7 @@ var dinos = {
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "15",
     cost_hourly: "$75"
-  }
+  },
 
    dino3:{
     name: "Spinosaurus Aegyptiacus",
@@ -38,7 +38,7 @@ var dinos = {
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "30",
     cost_hourly: "$120"
-  }
+  },
 
    dino4:{
     name: "Nyctosaurus",
@@ -48,7 +48,7 @@ var dinos = {
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "1",
     cost_hourly: "$20"
-  }
+  },
 
    dino5:{
     name: "Pterodaustro",
@@ -58,7 +58,7 @@ var dinos = {
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "2",
     cost_hourly: "$40"
-  }
+  },
 
    dino6:{
     name: "Pteranodon",
@@ -68,7 +68,7 @@ var dinos = {
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "2",
     cost_hourly: "$40"
-  }
+  },
 
    dino7:{
     name: "Shastasaurus Pacificus",
@@ -78,7 +78,7 @@ var dinos = {
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "100",
     cost_hourly: "$300"
-  }
+  },
 
    dino8:{
     name: "Opthalmusarus Iceniucs",
@@ -88,7 +88,7 @@ var dinos = {
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "20",
     cost_hourly: "$90"
-  }
+  },
 
    dino9:{
     name: "Mosasaurs Hoffmannii",
@@ -159,11 +159,15 @@ class App extends Component {
                 <Link to="/detail"/>
                 <UserProfile user={theUser} logout={this.logout} />
               </nav>
-              <Route exact path='/' component={LandingPage} />
+              <Route exact path='/' component={()=> (
+                <LandingPage
+                  dinos={dinos}
+                />)}
+              />
               <Route path='/cart' component={Cart} />
               <Route path='/detail' component={()=> (
                 <Details
-                  dino={dinos}
+                  dinos={dinos}
                 />)}
               />
             </div>
