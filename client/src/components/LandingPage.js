@@ -14,6 +14,8 @@ class LandingPage extends Component {
 
   render(){
 
+
+
     var dino1 = {
       name: "Irritator Challengeri",
       category: "land",
@@ -165,6 +167,7 @@ class LandingPage extends Component {
         </div>
 
       </div>
+
 
     )
   }
