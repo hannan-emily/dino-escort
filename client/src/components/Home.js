@@ -2,7 +2,7 @@ import React from 'react';
 import Signup from './Signup';
 import Login from './Login';
 
-export const UserProfile = props => {
+export const Home = props => {
   return(
     <div>
       <h1>Welcome to Dino Escort</h1>
