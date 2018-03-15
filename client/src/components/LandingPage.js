@@ -1,12 +1,19 @@
 import React, {Component} from 'react';
-
+import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
 
 
 
 class LandingPage extends Component {
+  constructor(props){
+    super(props)
+
+  }
 
   render(){
     console.log(this.props.dinos.dino1.img_path);
+    if(this.props.redirect){
+      return <Redirect to="/detail"/>
+    }
 
     return(
       <div className="body">
@@ -22,7 +29,7 @@ class LandingPage extends Component {
             <div className="dino-image">
               <img className="image" src={this.props.dinos.dino1.img_path} />
             </div>
-            <a href="/detail"><input type="button" value="More Details" onCLick={(e)=>this.props.detailClick(e,1)}/></a>
+            <input type="button" alt="submit" value="More Details" onClick={(e)=>this.props.detailClick(e,1)}/>
 
           </div>
 
