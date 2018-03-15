@@ -4,16 +4,9 @@ import React, {Component} from 'react';
 
 
 class LandingPage extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      cart: [],
-      current: {}
-    }
-  }
 
   render(){
-    console.log(this.props.dinos);
+    console.log(this.props.dinos.dino1.img_path);
 
     return(
       <div className="body">
@@ -26,7 +19,7 @@ class LandingPage extends Component {
           <div>
             <h2>{this.props.dinos.dino1.name}</h2>
             <img className="image" src="{this.props.dinos.dino1.img_path}" />
-            <input type="button" value='1' onCLick={(e)=>this.props.detailClick}/>
+            <input type="button" onCLick={(e)=>this.props.detailClick(e,1)}/>
           </div>
 
           <div>
