@@ -167,10 +167,10 @@ class App extends Component {
     var dino = `dino${number}`
     console.log(number);
     console.log(dino);
-    // this.setState({
-    //   current: dinos.dino,
-    //   redirect: true
-    // })
+    this.setState({
+      current: dinos.dino,
+      redirect: true
+    })
   }
 
   handleDinoToCart = (e, dino) =>{
