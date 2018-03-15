@@ -16,13 +16,13 @@ class LandingPage extends Component {
 
         <div className="category-land">
 
-          <div>LAND TRANSPORT</div>
+          <h2>LAND TRANSPORT</h2>
           <div class="dino-div">
             <h2>{this.props.dinos.dino1.name}</h2>
             <div className="dino-image">
               <img className="image" src={this.props.dinos.dino1.img_path} />
             </div>
-            <input type="button" onCLick={(e)=>this.props.detailClick(e,1)}/>
+            <a href="/detail"><input type="button" value="More Details" onCLick={(e)=>this.props.detailClick(e,1)}/></a>
 
           </div>
 
@@ -31,7 +31,7 @@ class LandingPage extends Component {
             <div className="dino-image">
               <img className="image" src={this.props.dinos.dino2.img_path} />
             </div>
-            <input type="button" onCLick={(e)=>this.props.detailClick(e,2)}/>
+            <a href="/detail"><input type="button" value="More Details" onCLick={(e)=>this.props.detailClick(e,2)}/></a>
 
           </div>
 
@@ -40,55 +40,68 @@ class LandingPage extends Component {
             <div className="dino-image">
               <img className="image" src={this.props.dinos.dino3.img_path} />
             </div>
-            <input type="button" onCLick={(e)=>this.props.detailClick(e,3)}/>
+            <a href="/detail"><input type="button" value="More Details" onCLick={(e)=>this.props.detailClick(e,3)}/></a>
 
           </div>
         </div>
 
         <div className="category-air">
-          <div>AIR TRANSPORT</div>
+          <h2>AIR TRANSPORT</h2>
           <div>
             <h2>{this.props.dinos.dino4.name}</h2>
+            <div className="dino-image">
             <img className="image" src={this.props.dinos.dino4.img_path} />
-            <input type="button" onCLick={(e)=>this.props.detailClick(e,4)}/>
+            </div>
+            <a href="/detail"><input type="button" value="More Details" onCLick={(e)=>this.props.detailClick(e,4)}/></a>
 
           </div>
 
           <div>
             <h2>{this.props.dinos.dino5.name}</h2>
+            <div className="dino-image">
             <img className="image" src={this.props.dinos.dino5.img_path} />
-            <input type="button" onCLick={(e)=>this.props.detailClick(e,5)}/>
+            </div>
+            <a href="/detail"><input type="button" value="More Details" onCLick={(e)=>this.props.detailClick(e,5)}/></a>
 
           </div>
 
           <div>
             <h2>{this.props.dinos.dino6.name}</h2>
+            <div className="dino-image">
             <img className="image" src={this.props.dinos.dino6.img_path} />
-            <input type="button" onCLick={(e)=>this.props.detailClick(e,6)}/>
+            </div>
+            <a href="/detail"><input type="button" value="More Details" onCLick={(e)=>this.props.detailClick(e,6)}/></a>
 
           </div>
         </div>
 
         <div className="category-water">
-          <div>WATER TRANSPORT</div>
+          <h2>WATER TRANSPORT</h2>
           <div>
             <h2>{this.props.dinos.dino7.name}</h2>
+            <div className="dino-image">>]
             <img className="image" src={this.props.dinos.dino7.img_path} />
-            <input type="button" onCLick={(e)=>this.props.detailClick(e,7)}/>
+            </div>
+            <a href="/detail"><input type="button" value="More Details" onCLick={(e)=>this.props.detailClick(e,7)}/></a>
 
           </div>
 
           <div>
             <h2>{this.props.dinos.dino8.name}</h2>
+            <div className="dino-image">
             <img className="image" src={this.props.dinos.dino8.img_path} />
-            <input type="button" onCLick={(e)=>this.props.detailClick(e,8)}/>
+            </div>
+            <a href="/detail"><input type="button" value="More Details" onCLick={(e)=>this.props.detailClick(e,8)}/></a>
 
           </div>
 
           <div>
             <h2>{this.props.dinos.dino9.name}</h2>
+            <div className="dino-image">
             <img className="image" src={this.props.dinos.dino9.img_path} />
-            <input type="button" onCLick={(e)=>this.props.detailClick(e,9)}/>
+            </div>
+            <a href="/detail"><input type="button" value="More Details" onCLick={(e)=>this.props.detailClick(e,9)}/></a>
+
           </div>
         </div>
 

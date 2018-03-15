@@ -11,14 +11,26 @@ html,body{
 .category-land {
   width:100vw;
   display: inline-block;
+  background: #D1913C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFD194, #D1913C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .category-air {
   width:100vw;
+  display: inline-block;
+  background: #e1eec3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .category-water {
   width:100vw;
+  display: inline-block;
+  background: #076585;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .dino-div {
@@ -27,7 +39,7 @@ html,body{
   display: inline-block;
 }
 .dino-image {
-  width: 100px;
+  width: 800px;
 }
 .image {
   width: 100%;
