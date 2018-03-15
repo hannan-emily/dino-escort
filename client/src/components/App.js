@@ -168,7 +168,7 @@ class App extends Component {
     console.log(number);
     console.log(dino);
     this.setState({
-      current: dinos.dino,
+      current: dinos[dino],
       redirect: true
     })
   }

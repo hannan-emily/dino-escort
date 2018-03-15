@@ -3,9 +3,9 @@ import Signup from './Signup';
 import Login from './Login';
 
 export const Details = props => {
-  var dinosArray = props.dino
-  console.log(dinosArray);
-  if(dinosArray === undefined || dinosArray === 'undefined'){
+  var dino = props.dino
+  console.log(dino);
+  if(dino === undefined || dino === 'undefined'){
     return(
       <div>
         <h1>Nothing in your cart</h1>
