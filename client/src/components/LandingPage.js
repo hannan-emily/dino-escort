@@ -14,9 +14,8 @@ class LandingPage extends Component {
 
 
   render(){
-    if()
     return(
-
+      <div></div>
     )
   }
 }

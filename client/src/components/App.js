@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {Home} from './Home';
 import {Details} from './Details';
+import {Cart} from './Cart';
 import LandingPage from './LandingPage';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
@@ -62,11 +63,11 @@ class App extends Component {
             <div>
               <nav className="nav">
                 <Link className='linkstyle' to='/'>Landing Page</Link>
-                <Link className='linkstyle' to="/Cart">Cart</Link>
+                <Link className='linkstyle' to="/cart">Cart</Link>
                 <UserProfile user={theUser} logout={this.logout} />
               </nav>
               <Route exact path='/' component={LandingPage} />
-              <Route path='/favoritefood' component={Cart} />
+              <Route path='/cart' component={Cart} />
             </div>
           </Router>
         </div>
