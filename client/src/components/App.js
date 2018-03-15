@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Signup from './Signup';
-import Login from './Login';
+
 import {UserProfile} from './UserProfile';
 import axios from 'axios';
 
@@ -61,8 +60,7 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-          <Signup liftToken={this.liftTokenToState} />
-          <Login liftToken={this.liftTokenToState} />
+          <Home liftToken={this.liftTokenToState} />
         </div>
       )
     }
