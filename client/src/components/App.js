@@ -156,7 +156,6 @@ class App extends Component {
     this.setState({
       current: dinos.dino
     })
-
   }
 
   render() {
