@@ -4,6 +4,7 @@ import {Home} from './Home';
 import {Details} from './Details';
 import {Cart} from './Cart';
 import LandingPage from './LandingPage';
+import img from '../img/dino-irritator-challengeri.png'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import dino1img from "../img/dino-irritator-challengeri.png";
@@ -116,7 +117,9 @@ class App extends Component {
     super(props)
     this.state = {
       token: '',
-      user: {}
+      user: {},
+      cart: [],
+      current: {}
     }
     this.liftTokenToState = this.liftTokenToState.bind(this)
     this.logout = this.logout.bind(this)
@@ -156,9 +159,14 @@ class App extends Component {
     }
   }
 
-  handleDetailClick = (e) =>{
+  handleDetailClick = (e,number) =>{
     e.preventDefault()
-    console.log('bullshit');
+    console.log('bullshit')
+    var dino = `dino${number}`
+    this.setState({
+      current: dinos.dino
+    })
+
   }
 
   render() {
@@ -187,7 +195,7 @@ class App extends Component {
               <Route path='/cart' component={Cart} />
               <Route path='/detail' component={()=> (
                 <Details
-                  dinos={dinos}
+                  dino={this.state.current}
                 />)}
               />
             </div>
