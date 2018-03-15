@@ -146,6 +146,11 @@ class App extends Component {
     }
   }
 
+  handleDetailClick = (e) =>{
+    e.preventDefault()
+
+  }
+
   render() {
     let theUser = this.state.user
     if (typeof theUser === 'object' && Object.keys(theUser).length > 0){
@@ -162,6 +167,7 @@ class App extends Component {
               <Route exact path='/' component={()=> (
                 <LandingPage
                   dinos={dinos}
+                  detailClick={handleDetailClick}
                 />)}
               />
               <Route path='/cart' component={Cart} />

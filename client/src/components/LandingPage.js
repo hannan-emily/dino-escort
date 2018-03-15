@@ -12,11 +12,6 @@ class LandingPage extends Component {
     }
   }
 
-  handleDetailClick = (e) =>{
-    e.preventDefault()
-
-  }
-
   render(){
     console.log(this.props.dinos);
 
@@ -31,6 +26,7 @@ class LandingPage extends Component {
           <div>
             <h2>{this.props.dinos.dino1.name}</h2>
             <img className="image" src="{this.props.dinos.dino1.img_path}" />
+            <input type="button" value='1' onCLick={this.props.detailClick}/>
           </div>
 
           <div>
