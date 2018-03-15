@@ -6,6 +6,16 @@ import {Cart} from './Cart';
 import LandingPage from './LandingPage';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
+import dino1img from "../img/dino-irritator-challengeri.png";
+import dino2img from "../img/dino-oxalaia.png";
+import dino3img from "../img/dino-spinosaurs.png";
+import dino4img from "../img/dino-nyctosaurus.png";
+import dino5img from "../img/dino-pterodaustro.png";
+import dino6img from "../img/dino-pteranodon.png";
+import dino7img from "../img/dino-shastasaurus.png";
+import dino8img from "../img/dino-opthalmusaurus.png";
+import dino9img from "../img/dino-mosasurus.png";
+
 import {UserProfile} from './UserProfile';
 import axios from 'axios';
 
@@ -13,7 +23,7 @@ var dinos = {
    dino1:{
     name: "Irritator Challengeri",
     category: "land",
-    img_path: "../img/dino-irritator-challengeri.png",
+    img_path: dino1img,
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "5",
@@ -167,7 +177,7 @@ class App extends Component {
               <Route exact path='/' component={()=> (
                 <LandingPage
                   dinos={dinos}
-                  detailClick={handleDetailClick}
+                  // detailClick={handleDetailClick}
                 />)}
               />
               <Route path='/cart' component={Cart} />
