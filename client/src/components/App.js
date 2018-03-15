@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import {Home} from './Home';
 
 import {UserProfile} from './UserProfile';
 import axios from 'axios';
@@ -55,6 +56,7 @@ class App extends Component {
       return(
         <div>
           <UserProfile user={theUser} logout={this.logout} />
+          <LandingPage />
         </div>
       )
     } else {
