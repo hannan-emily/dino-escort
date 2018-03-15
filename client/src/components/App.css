@@ -9,18 +9,26 @@ html,body{
 }
 
 .category-land {
-  display: inline;
+  width:100vw;
+  display: inline-block;
 }
 
 .category-air {
-  display: inline;
+  width:100vw;
 }
 
 .category-water {
-  display: inline;
+  width:100vw;
 }
 
 .dino-div {
   width: 30%;
   background-color: grey;
+  display: inline-block;
+}
+.dino-image {
+  width: 100px;
+}
+.image {
+  width: 100%;
 }
