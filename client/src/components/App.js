@@ -166,7 +166,6 @@ class App extends Component {
     this.setState({
       current: dinos.dino
     })
-
   }
 
   render() {
@@ -185,11 +184,7 @@ class App extends Component {
               <Route exact path='/' component={()=> (
                 <LandingPage
                   dinos={dinos}
-
-
-
                   detailClick={this.handleDetailClick}
-
                 />)}
               />
               <Route path='/cart' component={Cart} />
