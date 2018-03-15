@@ -119,10 +119,12 @@ class App extends Component {
       token: '',
       user: {},
       cart: [],
-      current: {}
+      current: {},
+      redirect: false
     }
     this.liftTokenToState = this.liftTokenToState.bind(this)
     this.logout = this.logout.bind(this)
+    this.handleDetailClick = this.handleDetailClick.bind(this)
   }
 
   liftTokenToState(data){
@@ -159,14 +161,18 @@ class App extends Component {
     }
   }
 
-  handleDetailClick = (e,number) =>{
+  handleDetailClick(e,number){
     e.preventDefault()
     console.log('bullshit')
     var dino = `dino${number}`
-    this.setState({
-      current: dinos.dino
-    })
+    console.log(number);
+    console.log(dino);
+    // this.setState({
+    //   current: dinos.dino,
+    //   redirect: true
+    // })
   }
+
   handleDinoToCart = (e, dino) =>{
     e.preventDefault()
     this.setState({
@@ -191,6 +197,7 @@ class App extends Component {
                 <LandingPage
                   dinos={dinos}
                   detailClick={this.handleDetailClick}
+                  redirect={this.state.redirect}
                 />)}
               />
               <Route path='/cart' component={()=> (
@@ -198,7 +205,7 @@ class App extends Component {
                   cart={this.state.cart}
                 />)}
               />
-              <Route path='/detail' component={()=> (
+              <Route path='/detail' render={()=> (
                 <Details
                   dino={this.state.current}
                 />)}
