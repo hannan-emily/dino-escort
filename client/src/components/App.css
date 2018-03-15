@@ -5,42 +5,64 @@
 html,body{
   margin: 0;
   padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
 
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.nav {
+  text-align: center;
 }
 
 .category-land {
   width:100vw;
+  text-align: center;
   display: inline-block;
-  background: #D1913C;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #FFD194, #D1913C);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #649173;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DBD5A4, #649173);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DBD5A4, #649173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .category-air {
   width:100vw;
-  display: inline-block;
-  background: #e1eec3;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  text-align: center;
+  /* display: inline-block; */
+  background: #E0EAFC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .category-water {
   width:100vw;
-  display: inline-block;
-  background: #076585;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  /* display: inline-block; */
+  background: #bdc3c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.dino-div {
-  width: 30%;
-  background-color: grey;
-  display: inline-block;
-}
-.dino-image {
-  width: 800px;
-}
-.image {
+ /* .dino-div {
   width: 100%;
+
+} */
+
+.dino-image {
+  height: 300px;
+}
+
+.image {
+  height: 100%;
 }
