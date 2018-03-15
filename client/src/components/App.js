@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Home} from './Home';
+import {Details} from './Details';
+import LandingPage from './LandingPage';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import {UserProfile} from './UserProfile';
 import axios from 'axios';
@@ -55,8 +58,17 @@ class App extends Component {
     if (typeof theUser === 'object' && Object.keys(theUser).length > 0){
       return(
         <div>
-          <UserProfile user={theUser} logout={this.logout} />
-          <LandingPage />
+          <Router>
+            <div>
+              <nav className="nav">
+                <Link className='linkstyle' to='/'>Landing Page</Link>
+                <Link className='linkstyle' to="/Cart">Cart</Link>
+                <UserProfile user={theUser} logout={this.logout} />
+              </nav>
+              <Route exact path='/' component={LandingPage} />
+              <Route path='/favoritefood' component={Cart} />
+            </div>
+          </Router>
         </div>
       )
     } else {
