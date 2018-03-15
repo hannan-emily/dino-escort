@@ -6,28 +6,70 @@ html,body{
   margin: 0;
   padding: 0;
   font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
 h1 {
+  padding: 0px;
+  margin: 0px;
   font-size: 70px;
   font-weight: 600;
 }
 
 h2 {
-  font-size: 50px;
+  padding-top: 20px;
+  margin: 0px;
+  font-size: 60px;
 }
 
 h3 {
+  padding: 0px;
+
   font-size: 30px;
   font-weight: 400;
 }
 
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: white;
+  }
+
+.body-header {
+  color: white;
+}
+
 .nav {
   text-align: center;
+  color: white;
 }
 
 .category-land {
+  margin: 0px;
+  padding: 0px;
   width:100vw;
   text-align: center;
   display: inline-block;
@@ -37,6 +79,8 @@ h3 {
 }
 
 .category-air {
+  margin: 0px;
+  padding: 0px;
   width:100vw;
   text-align: center;
   /* display: inline-block; */
@@ -46,6 +90,8 @@ h3 {
 }
 
 .category-water {
+  margin: 0px;
+  padding: 0px;
   width:100vw;
   text-align: center;
   /* display: inline-block; */
@@ -60,9 +106,13 @@ h3 {
 } */
 
 .dino-image {
+  margin: 0px;
+  padding: 0px;
   height: 300px;
 }
 
 .image {
+  margin: 0px;
+  padding: 0px;
   height: 100%;
 }
