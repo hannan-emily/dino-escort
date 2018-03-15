@@ -148,7 +148,7 @@ class App extends Component {
 
   handleDetailClick = (e) =>{
     e.preventDefault()
-
+    console.log('bullshit');
   }
 
   render() {
@@ -167,7 +167,7 @@ class App extends Component {
               <Route exact path='/' component={()=> (
                 <LandingPage
                   dinos={dinos}
-                  detailClick={handleDetailClick}
+                  detailClick={this.handleDetailClick}
                 />)}
               />
               <Route path='/cart' component={Cart} />
