@@ -27,8 +27,10 @@ class LandingPage extends Component {
           <div>LAND TRANSPORT</div>
           <div>
             <h2>{this.props.dinos.dino1.name}</h2>
+
             <img className="image" src={this.props.dinos.dino1.img_path} />
             <input type="button" onCLick={this.props.detailClick(e,1)}/>
+
           </div>
 
           <div>
