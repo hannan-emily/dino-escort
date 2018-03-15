@@ -19,21 +19,27 @@ class LandingPage extends Component {
           <div>LAND TRANSPORT</div>
           <div class="dino-div">
             <h2>{this.props.dinos.dino1.name}</h2>
-            <img className="image" src={this.props.dinos.dino1.img_path} />
+            <div className="dino-image">
+              <img className="image" src={this.props.dinos.dino1.img_path} />
+            </div>
             <input type="button" onCLick={(e)=>this.props.detailClick(e,1)}/>
 
           </div>
 
           <div class="dino-div">
             <h2>{this.props.dinos.dino2.name}</h2>
-            <img className="image" src={this.props.dinos.dino2.img_path} />
+            <div className="dino-image">
+              <img className="image" src={this.props.dinos.dino2.img_path} />
+            </div>
             <input type="button" onCLick={(e)=>this.props.detailClick(e,2)}/>
 
           </div>
 
           <div class="dino-div">
             <h2>{this.props.dinos.dino3.name}</h2>
-            <img className="image" src={this.props.dinos.dino3.img_path} />
+            <div className="dino-image">
+              <img className="image" src={this.props.dinos.dino3.img_path} />
+            </div>
             <input type="button" onCLick={(e)=>this.props.detailClick(e,3)}/>
 
           </div>
