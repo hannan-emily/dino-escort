@@ -15,27 +15,25 @@ class LandingPage extends Component {
 
 
         <div className="category-land">
-          <div>LAND TRANSPORT</div>
-          <div>
-            <h2>{this.props.dinos.dino1.name}</h2>
 
-            <img className="image" src="{this.props.dinos.dino1.img_path}" />
+          <div>LAND TRANSPORT</div>
+          <div class="dino-div">
+            <h2>{this.props.dinos.dino1.name}</h2>
+            <img className="image" src={this.props.dinos.dino1.img_path} />
             <input type="button" onCLick={(e)=>this.props.detailClick(e,1)}/>
 
           </div>
 
-          <div>
+          <div class="dino-div">
             <h2>{this.props.dinos.dino2.name}</h2>
             <img className="image" src={this.props.dinos.dino2.img_path} />
-
             <input type="button" onCLick={(e)=>this.props.detailClick(e,2)}/>
 
           </div>
 
-          <div>
+          <div class="dino-div">
             <h2>{this.props.dinos.dino3.name}</h2>
-            <img className="image" src="{this.props.dinos.dino3.img_path}" />
-
+            <img className="image" src={this.props.dinos.dino3.img_path} />
             <input type="button" onCLick={(e)=>this.props.detailClick(e,3)}/>
 
           </div>
@@ -45,24 +43,21 @@ class LandingPage extends Component {
           <div>AIR TRANSPORT</div>
           <div>
             <h2>{this.props.dinos.dino4.name}</h2>
-            <img className="image" src="{this.props.dinos.dino4.img_path}" />
-
+            <img className="image" src={this.props.dinos.dino4.img_path} />
             <input type="button" onCLick={(e)=>this.props.detailClick(e,4)}/>
 
           </div>
 
           <div>
             <h2>{this.props.dinos.dino5.name}</h2>
-            <img className="image" src="{this.props.dinos.dino5.img_path}" />
-
+            <img className="image" src={this.props.dinos.dino5.img_path} />
             <input type="button" onCLick={(e)=>this.props.detailClick(e,5)}/>
 
           </div>
 
           <div>
             <h2>{this.props.dinos.dino6.name}</h2>
-            <img className="image" src="{this.props.dinos.dino6.img_path}" />
-
+            <img className="image" src={this.props.dinos.dino6.img_path} />
             <input type="button" onCLick={(e)=>this.props.detailClick(e,6)}/>
 
           </div>
@@ -72,26 +67,22 @@ class LandingPage extends Component {
           <div>WATER TRANSPORT</div>
           <div>
             <h2>{this.props.dinos.dino7.name}</h2>
-            <img className="image" src="{this.props.dinos.dino7.img_path}" />
-
+            <img className="image" src={this.props.dinos.dino7.img_path} />
             <input type="button" onCLick={(e)=>this.props.detailClick(e,7)}/>
 
           </div>
 
           <div>
             <h2>{this.props.dinos.dino8.name}</h2>
-            <img className="image" src="{this.props.dinos.dino8.img_path}" />
-
+            <img className="image" src={this.props.dinos.dino8.img_path} />
             <input type="button" onCLick={(e)=>this.props.detailClick(e,8)}/>
 
           </div>
 
           <div>
             <h2>{this.props.dinos.dino9.name}</h2>
-            <img className="image" src="{this.props.dinos.dino9.img_path}" />
-
+            <img className="image" src={this.props.dinos.dino9.img_path} />
             <input type="button" onCLick={(e)=>this.props.detailClick(e,9)}/>
-
           </div>
         </div>
 
