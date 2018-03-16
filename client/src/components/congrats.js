@@ -7,7 +7,10 @@ class Congrats extends Component {
   }
   render(){
     return(
-      <h2>Congrats you checked out!</h2>
+      <div>
+        <h2>Congrats you checked out!</h2>
+        <h3>Make Sure you have the cash to pay the escorts when they arrive</h3>
+      </div>    
     )
   }
 }
