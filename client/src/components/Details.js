@@ -9,8 +9,7 @@ class Details extends Component {
   }
 
   render() {
-
-    if(this.props.redirect){
+    if(this.props.redirectC){
       return (<Redirect to="/cart"/>)
     }
 
