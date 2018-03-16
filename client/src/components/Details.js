@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Signup from './Signup';
 import Login from './Login';
+import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
 
 class Details extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class Details extends Component {
       return <Redirect to="/detail"/>
     }
 
-    var dino = props.dino
+    var dino = this.props.dino
     console.log(dino);
     if(dino === undefined || dino === 'undefined'){
       return(
