@@ -26,15 +26,18 @@ class Details extends Component {
       return(
         <div>
 
-          <div class="dino-div">
 
-            <div className="dino-image2">
-              <img className="image" src={this.props.dino.img_path} />
-            </div>
+          <div className="dino-div-details">
+
+
+              <div className="dino-image2">
+                <img className="image" src={this.props.dino.img_path} />
+              </div>
+          
 
             <div className="dino-content">
               <div className="dino-text">
-                <h3>{this.props.dino.name}</h3>
+                <h2>{this.props.dino.name}</h2>
                 <p>{this.props.dino.text}</p>
               </div>
 
