@@ -199,7 +199,7 @@ class App extends Component {
                 <LandingPage
                   dinos={dinos}
                   detailClick={this.handleDetailClick}
-                  redirect={this.state.redirect}
+                  redirect={this.state.redirectDetail}
                 />)}
               />
               <Route path='/cart' component={()=> (
