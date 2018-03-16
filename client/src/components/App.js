@@ -3,6 +3,7 @@ import './App.css';
 import {Home} from './Home';
 import Details from './Details';
 import Cart from './Cart';
+import Congrats from './Congrats';
 import LandingPage from './LandingPage';
 import img from '../img/dino-irritator-challengeri.png'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
@@ -121,11 +122,13 @@ class App extends Component {
       cart: [],
       current: {},
       redirectDetail: false,
-      redirectCart: false
+      redirectCart: false,
+      redirectCongrats: false
     }
     this.liftTokenToState = this.liftTokenToState.bind(this)
     this.logout = this.logout.bind(this)
     this.handleDetailClick = this.handleDetailClick.bind(this)
+
   }
 
   liftTokenToState(data){
@@ -185,9 +188,18 @@ class App extends Component {
 
   addToCart = (e, dino) =>{
     e.preventDefault()
+    console.log('add to cart hit')
     this.setState({
       cart:[...this.state.cart, dino],
       redirectCart: true
+    })
+  }
+
+  goToCongrats = (e, dino) =>{
+    e.preventDefault()
+    console.log('hit go to congrats route')
+    this.setState({
+      redirectCongrats: true
     })
   }
 
@@ -228,6 +240,8 @@ class App extends Component {
                   redirectC={this.state.redirectCart}
                 />)}
               />
+              <Route path='/congrats' component={()=> (
+                <Congrats />)} />
             </div>
           </Router>
         </div>
