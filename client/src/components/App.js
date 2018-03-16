@@ -169,7 +169,8 @@ class App extends Component {
     if (this.state.redirectDetail || this.state.redirectCart) {
       this.setState({
         redirectDetail: false,
-        redirectCart: false
+        redirectCart: false,
+        redirectCongrats: false
       })
     }
   }
@@ -195,14 +196,23 @@ class App extends Component {
     })
   }
 
-  goToCongrats = (e, dino) =>{
+  bookClick = (e) =>{
     e.preventDefault()
     console.log('hit go to congrats route')
     this.setState({
       redirectCongrats: true
     })
   }
-
+  removeFromCart = (e,index)=>{
+    e.preventDefault()
+    console.log(index);
+    var newCart = this.state.cart
+    newCart.splice(index,1)
+    console.log(newCart);
+    this.setState({
+      cart:newCart
+    })
+  }
   render() {
 
     let theUser = this.state.user
@@ -231,6 +241,9 @@ class App extends Component {
                 <Cart
                   cart={this.state.cart}
                   user={theUser}
+                  congrats={this.state.redirectCongrats}
+                  removeFromCart={this.removeFromCart}
+                  bookClick={this.bookClick}
                 />)}
               />
               <Route path='/detail' component={()=> (
@@ -240,8 +253,6 @@ class App extends Component {
                   redirectC={this.state.redirectCart}
                 />)}
               />
-              <Route path='/congrats' component={()=> (
-                <Congrats />)} />
             </div>
           </Router>
         </div>
