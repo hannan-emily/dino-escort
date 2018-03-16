@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Home} from './Home';
-import {Details} from './Details';
+import Details from './Details';
 import {Cart} from './Cart';
 import LandingPage from './LandingPage';
 import img from '../img/dino-irritator-challengeri.png'
@@ -120,7 +120,8 @@ class App extends Component {
       user: {},
       cart: [],
       current: {},
-      redirect: false
+      redirectDetail: false,
+      redirectCart: false
     }
     this.liftTokenToState = this.liftTokenToState.bind(this)
     this.logout = this.logout.bind(this)
@@ -169,14 +170,15 @@ class App extends Component {
     console.log(dino);
     this.setState({
       current: dinos[dino],
-      redirect: true
+      redirectDetail: true
     })
   }
 
-  handleDinoToCart = (e, dino) =>{
+  addToCart = (e, dino) =>{
     e.preventDefault()
     this.setState({
-      cart:[...this.state.cart, dino]
+      cart:[...this.state.cart, dino],
+      redirectCart: true
     })
   }
 
@@ -203,11 +205,15 @@ class App extends Component {
               <Route path='/cart' component={()=> (
                 <Cart
                   cart={this.state.cart}
+                  user={theUser}
+
                 />)}
               />
               <Route path='/detail' render={()=> (
                 <Details
                   dino={this.state.current}
+                  addToCart={this.addToCart}
+                  redirect={this.state.redirectCart}
                 />)}
               />
             </div>
