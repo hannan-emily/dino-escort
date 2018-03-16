@@ -147,7 +147,7 @@ class App extends Component {
 
   componentDidMount() {
     var token = localStorage.getItem('mernToken')
-    console.log(token);
+    console.log(this.state.current);
     if(token === 'undefined' || token === 'null' || token === ''|| token === undefined){
       localStorage.removeItem('mernToken')
       this.setState({
@@ -159,9 +159,18 @@ class App extends Component {
         localStorage.setItem('mernToken', result.data.token)
         this.setState({
           token: result.data.token,
-          user: result.data.user
+          user: result.data.user,
         })
       }).catch(error=>console.log(error))
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.redirectDetail || this.state.redirectCart) {
+      this.setState({
+        redirectDetail: false,
+        redirectCart: false
+      })
     }
   }
 
@@ -195,6 +204,7 @@ class App extends Component {
   }
 
   render() {
+
     let theUser = this.state.user
     if (typeof theUser === 'object' && Object.keys(theUser).length > 0){
       return(
@@ -212,22 +222,22 @@ class App extends Component {
                 <LandingPage
                   dinos={dinos}
                   detailClick={this.handleDetailClick}
-                  redirect={this.state.redirectDetail}
+                  redirectD={this.state.redirectDetail}
+                  redirectC={this.state.redirectCart}
+
                 />)}
               />
               <Route path='/cart' component={()=> (
                 <Cart
                   cart={this.state.cart}
                   user={theUser}
-                  goToCongrats={this.goToCongrats}
-                  redirect={this.state.redirectCongrats}
                 />)}
               />
               <Route path='/detail' component={()=> (
                 <Details
                   dino={this.state.current}
                   addToCart={this.addToCart}
-                  redirect={this.state.redirectCart}
+                  redirectC={this.state.redirectCart}
                 />)}
               />
               <Route path='/congrats' component={()=> (
