@@ -5,13 +5,16 @@ import Login from './Login';
 export const Home = props => {
   return(
     <div>
-      <h1>Welcome to Dino Escort</h1>
-      <div className="signup">
-        <Signup liftToken={props.liftToken} />
+      <div className='home-page'>
+        <h1 className='home-title underline'>Welcome to Dino Escort</h1>
+        <div className="signup">
+          <Signup liftToken={props.liftToken} />
+        </div>
+        <div className="login">
+          <Login liftToken={props.liftToken} />
+        </div>
       </div>
-      <div className="login">
-        <Login liftToken={props.liftToken} />
-      </div>
+      
     </div>
   )
 }

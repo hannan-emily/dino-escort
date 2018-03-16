@@ -36,13 +36,15 @@ class Login extends Component {
 
   render(){
     return(
-      <form onSubmit={this.handleSubmit}>
+      <form className='card-back' onSubmit={this.handleSubmit}>
+        <div className="box">
+          Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} />
+          <br />
+          Password: <input type="password" value={this.state.password} onChange={this.handlePasswordChange} />
+          <br />
+          <button type='submit'>Login</button>
+        </div>
 
-        Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} />
-        <br />
-        Password: <input type="password" value={this.state.password} onChange={this.handlePasswordChange} />
-        <br />
-        <button type='submit'>Login</button>
       </form>
     )
   }

@@ -38,7 +38,7 @@ class Cart extends Component {
     var jsxDinos = dinosInCart.map((dino,index)=> {
       return(
       <div key={index} className='dinocard'>
-        <h3 className='dinotitle'>{dino.name}</h3>
+        <h3 className='dinotitle underline'>{dino.name}</h3>
         <button onClick={e=>this.props.removeFromCart(e,index)}>Remove From Cart</button>
         <p className='inline'>Gold Cost: ${dino.cost_hourly}/hour</p>
         <div className='dino-image'>
@@ -56,7 +56,7 @@ class Cart extends Component {
     } else {
       if(this.props.congrats){
         return(
-          <div>
+          <div className="congrats-card">
             <Congrats />
             <h4>Booked Date: {date}</h4>
             <h4>Gold Due: ${cashDue}</h4>
@@ -69,6 +69,7 @@ class Cart extends Component {
             {jsxDinos}
 
             <div>
+              <h3 className='underline'>Pick a date</h3>
               <DatePicker
                 selected={this.state.startDate}
                 onChange={this.handleChange}
