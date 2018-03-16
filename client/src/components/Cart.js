@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
 
+import 'react-datepicker/dist/react-datepicker.css';
 
 
 class Cart extends Component {
   constructor(props){
     super(props)
+    this.state = {
+      startDate: moment()
+    }
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    });
   }
   render(){
+    if(this.props.redirectC){
+      this.props.endRedirectC()
+    }
     var dinosInCart = this.props.cart
     console.log(dinosInCart);
     var jsxDinos = dinosInCart.map(dino => {
@@ -32,6 +47,15 @@ class Cart extends Component {
           <h1>You Have Selected</h1>
           {jsxDinos}
           <div>
+            <DatePicker
+              selected={this.state.startDate}
+              onChange={this.handleChange}
+              showTimeSelect
+              timeFormat="HH:mm"
+              timeIntervals={15}
+              dateFormat="LLL"
+              timeCaption="time"
+          />
             <button type="submit" onClick={this.bookClick}>Book It!</button>
           </div>
         </div>
