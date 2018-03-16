@@ -190,11 +190,12 @@ class App extends Component {
           <Router>
             <div>
               <nav className="nav">
-                <Link className='linkstyle' to='/'>Landing Page</Link>
-                <Link className='linkstyle' to="/cart">Cart</Link>
-                <Link to="/detail"/>
+                <Link class-="link" to='/'>Landing Page</Link>{' '}
+                <Link class-="link" to="/cart">Cart</Link>{' '}
+                <Link to="/detail"/>{' '}
                 <UserProfile user={theUser} logout={this.logout} />
               </nav>
+
               <Route exact path='/' component={()=> (
                 <LandingPage
                   dinos={dinos}
@@ -209,7 +210,7 @@ class App extends Component {
 
                 />)}
               />
-              <Route path='/detail' render={()=> (
+              <Route path='/detail' component={()=> (
                 <Details
                   dino={this.state.current}
                   addToCart={this.addToCart}
