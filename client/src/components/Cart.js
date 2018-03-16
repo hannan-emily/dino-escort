@@ -9,7 +9,7 @@ export const Cart = props => {
     <div className='dinocard'>
       <h3 className='dinotitle'>{dino.name}Working?</h3>
       <div className='dinoimage'>
-        <img className='image' src={dino.img_path}/>
+        <img className='cart-image' src={dino.img_path}/>
       </div>
     </div>)
   })

@@ -142,3 +142,7 @@ a:active {
   width: 50%;
   display: inline-block;
 }
+
+.cart-image {
+  height: 400px;
+}
