@@ -146,3 +146,47 @@ a:active {
 .cart-image {
   height: 400px;
 }
+.underline {
+  border-bottom: 1px solid black;
+}
+
+/* .background-home {
+  z-index: 0;
+object-fit: cover;
+} */
+.signup {
+  display: inline-block;
+  text-align: left;
+  color:white;
+  padding-top: 5px;
+  vertical-align: top;
+}
+.login {
+  display: inline-block;
+  text-align: left;
+  color:white;
+  padding-top: 5px;
+  margin: 0 10px 0 10px;
+  vertical-align: top;
+}
+.home-title{
+  color:white;
+}
+.home-page {
+  background-image: url('https://www.universetoday.com/wp-content/uploads/2010/10/pangea.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+.card-back {
+  width: 250px;
+  height:90px;
+  background-color: rgba(0,0,0,.4);
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.box {
+  width: 255px;
+  margin: 10px;
+}
