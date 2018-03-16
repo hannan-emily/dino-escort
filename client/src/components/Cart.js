@@ -24,21 +24,30 @@ class Cart extends Component {
 
   render(){
     var dinosInCart = this.props.cart
-    console.log(dinosInCart);
-    console.log(this.props.congrats);
+    console.log(dinosInCart)
+    console.log(this.props.congrats)
+    var cashDueArray = dinosInCart.map(dino=>{
+      return dino.cost_hourly
+    })
+    let cashDue = 0
+    for(let cost of cashDueArray){
+      cashDue += cost
+    }
+    let date = (this.state.startDate._d).toString()
+    console.log(date);
     var jsxDinos = dinosInCart.map((dino,index)=> {
       return(
       <div key={index} className='dinocard'>
         <h3 className='dinotitle'>{dino.name}</h3>
         <button onClick={e=>this.props.removeFromCart(e,index)}>Remove From Cart</button>
-        <p className='inline'>Cost: {dino.cost_hourly}/hour</p>
+        <p className='inline'>Gold Cost: ${dino.cost_hourly}/hour</p>
         <div className='dino-image'>
           <img className='image' src={dino.img_path}/>
         </div>
       </div>)
     })
 
-    if(dinosInCart === []){
+    if(cashDue === 0){
       return(
         <div className='container'>
           <h1>Cart in empty</h1>
@@ -49,6 +58,8 @@ class Cart extends Component {
         return(
           <div>
             <Congrats />
+            <h4>Booked Date: {date}</h4>
+            <h4>Gold Due: ${cashDue}</h4>
           </div>
         )
       } else {
