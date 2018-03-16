@@ -11,7 +11,7 @@ class Details extends Component {
   render() {
 
     if(this.props.redirect){
-      return <Redirect to="/detail"/>
+      return <Redirect to="/cart"/>
     }
 
     var dino = this.props.dino
