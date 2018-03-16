@@ -25,27 +25,30 @@ class Details extends Component {
     } else {
       return(
         <div>
-        <h2>test text here</h2>
 
-        <div class="dino-div">
-          <h3>{this.props.dino.name}</h3>
+          <div class="dino-div">
 
-          <div className="dino-image">
-            <img className="image" src={this.props.dino.img_path} />
-          </div>
-
-          <div className="dino-content">
-            <div className="dino-text">
+            <div className="dino-image2">
+              <img className="image" src={this.props.dino.img_path} />
             </div>
 
-            <div className="dino-text">
-              <h3>Capacity: {this.props.dino.capacity} people</h3>
-              <h3>Cost: {this.props.dino.cost_hourly}/hour</h3>
+            <div className="dino-content">
+              <div className="dino-text">
+                <h3>{this.props.dino.name}</h3>
+                <p>{this.props.dino.text}</p>
+              </div>
+
+              <div className="dino-text">
+                <h3>Capacity: {this.props.dino.capacity} people</h3>
+                <h3>Cost: {this.props.dino.cost_hourly} / hour</h3>
+              </div>
             </div>
+
+            <input type="button" alt="submit" value="Book Now" onClick={(e)=>this.props.addToCart(e,dino)}/>
+
 
           </div>
 
-        </div>
         </div>
       )
     }

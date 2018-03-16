@@ -116,3 +116,21 @@ a:active {
   padding: 0px;
   height: 100%;
 }
+
+.dino-image2 {
+  margin: 0px;
+  padding: 0px;
+  height: 400px;
+}
+
+.dino-content {
+  margin: 0px;
+  padding: 0px;
+  width:100vw;
+  display: inline-block;
+}
+
+.dino-text {
+  width: 50%;
+  display: inline-block;
+}
