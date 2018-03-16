@@ -23,7 +23,7 @@ export const Cart = props => {
   } else {
     return(
       <div className='container'>
-        <h1>You Have Selected</h1>
+        <h1 className="h1-white">You Have Selected</h1>
         {jsxDinos}
       </div>
     )
