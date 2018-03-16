@@ -9,8 +9,8 @@ class Congrats extends Component {
     return(
       <div>
         <h2>Congrats you checked out!</h2>
-        <h3>Make Sure you have the cash to pay the escorts when they arrive</h3>
-      </div>    
+        <h3>Make Sure you have the Gold to pay the escorts when they arrive!</h3>
+      </div>
     )
   }
 }

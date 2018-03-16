@@ -42,7 +42,7 @@ class Details extends Component {
 
               <div className="dino-text">
                 <h3>Capacity: {this.props.dino.capacity} people</h3>
-                <h3>Cost: {this.props.dino.cost_hourly} / hour</h3>
+                <h3>Gold Cost: ${this.props.dino.cost_hourly} / hour</h3>
               </div>
             </div>
 

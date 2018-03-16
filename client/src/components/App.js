@@ -29,7 +29,7 @@ var dinos = {
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "5",
-    cost_hourly: "$50"
+    cost_hourly: 50
   },
 
    dino2:{
@@ -39,7 +39,7 @@ var dinos = {
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "15",
-    cost_hourly: "$75"
+    cost_hourly: 75
   },
 
    dino3:{
@@ -49,7 +49,7 @@ var dinos = {
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "30",
-    cost_hourly: "$120"
+    cost_hourly: 120
   },
 
    dino4:{
@@ -59,7 +59,7 @@ var dinos = {
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "1",
-    cost_hourly: "$20"
+    cost_hourly: 20
   },
 
    dino5:{
@@ -69,7 +69,7 @@ var dinos = {
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity : "2",
-    cost_hourly: "$40"
+    cost_hourly: 40
   },
 
    dino6:{
@@ -79,7 +79,7 @@ var dinos = {
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "2",
-    cost_hourly: "$40"
+    cost_hourly: 40
   },
 
    dino7:{
@@ -89,7 +89,7 @@ var dinos = {
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "100",
-    cost_hourly: "$300"
+    cost_hourly: 300
   },
 
    dino8:{
@@ -99,7 +99,7 @@ var dinos = {
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "20",
-    cost_hourly: "$90"
+    cost_hourly: 90
   },
 
    dino9:{
@@ -109,7 +109,7 @@ var dinos = {
     img_headshot_path: "",
     text: "Banjo unicorn butcher pabst venmo jianbing, williamsburg wolf vegan dreamcatcher cornhole master cleanse fixie. Tilde brooklyn taiyaki 8-bit, skateboard cronut post-ironic pok pok. Schlitz post-ironic normcore green juice chartreuse, pop-up polaroid food truck squid sriracha fingerstache la croix salvia.",
     capacity: "7",
-    cost_hourly: "$60"
+    cost_hourly: 60
   }
 }
 
@@ -200,9 +200,10 @@ class App extends Component {
     e.preventDefault()
     console.log('hit go to congrats route')
     this.setState({
-      redirectCongrats: true
+      redirectCongrats: true,
     })
   }
+
   removeFromCart = (e,index)=>{
     e.preventDefault()
     console.log(index);
@@ -222,7 +223,7 @@ class App extends Component {
           <Router>
             <div>
               <nav className="nav">
-                <Link class-="link" to='/'>Landing Page</Link>{' '}
+                <Link class-="link" to='/'>Dino List</Link>{' '}
                 <Link class-="link" to="/cart">Cart</Link>{' '}
                 <Link to="/detail"/>{' '}
                 <UserProfile user={theUser} logout={this.logout} />
