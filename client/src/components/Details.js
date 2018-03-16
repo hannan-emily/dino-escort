@@ -11,7 +11,7 @@ class Details extends Component {
   render() {
 
     if(this.props.redirect){
-      return <Redirect to="/cart"/>
+      return (<Redirect to="/cart"/>)
     }
 
     var dino = this.props.dino
@@ -33,7 +33,7 @@ class Details extends Component {
               <div className="dino-image2">
                 <img className="image" src={this.props.dino.img_path} />
               </div>
-          
+
 
             <div className="dino-content">
               <div className="dino-text">

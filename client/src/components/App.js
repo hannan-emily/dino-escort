@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {Home} from './Home';
 import Details from './Details';
-import {Cart} from './Cart';
+import Cart from './Cart';
 import LandingPage from './LandingPage';
 import img from '../img/dino-irritator-challengeri.png'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
