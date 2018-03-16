@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-
+import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
 
 class Cart extends Component {
   constructor(props){
@@ -31,9 +30,8 @@ class Cart extends Component {
         <div className='container'>
           <h1>You Have Selected</h1>
           {jsxDinos}
-          <div>
-            <button type="submit" onClick={this.bookClick}>Book It!</button>
-          </div>
+
+        
         </div>
       )
     }
