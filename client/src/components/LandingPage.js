@@ -17,6 +17,7 @@ class LandingPage extends Component {
       return <Redirect to="/detail"/>
     }
     return(
+
       <div className="body">
         <h1 className="body-header">DINO ESCORT</h1>
         <h3 className="body-header">By land, by sea, by air: here for all your transport needs</h3>

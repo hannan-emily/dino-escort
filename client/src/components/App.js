@@ -5,6 +5,7 @@ import Details from './Details';
 import Cart from './Cart';
 import Congrats from './Congrats';
 import LandingPage from './LandingPage';
+import Nav from './Nav';
 import img from '../img/dino-irritator-challengeri.png'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
@@ -222,12 +223,8 @@ class App extends Component {
         <div>
           <Router>
             <div>
-              <nav className="nav">
-                <Link class-="link" to='/'>Dino List</Link>{' '}
-                <Link class-="link" to="/cart">Cart</Link>{' '}
-                <Link to="/detail"/>{' '}
-                <UserProfile user={theUser} logout={this.logout} />
-              </nav>
+
+              <Nav />
 
               <Route exact path='/' component={()=> (
                 <LandingPage

@@ -65,6 +65,8 @@ a:active {
 .nav {
   text-align: center;
   color: white;
+  margin: 5px 0 5px 0;
+  height: 20px;
 }
 
 .h1-white {
