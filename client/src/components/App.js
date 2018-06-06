@@ -235,7 +235,6 @@ class App extends Component {
                   detailClick={this.handleDetailClick}
                   redirectD={this.state.redirectDetail}
                   redirectC={this.state.redirectCart}
-
                 />)}
               />
 
@@ -256,9 +255,8 @@ class App extends Component {
                   redirectC={this.state.redirectCart}
                 />)}
               />
-
-
-            </div>
+              </div>
+  
           </Router>
         </div>
       )

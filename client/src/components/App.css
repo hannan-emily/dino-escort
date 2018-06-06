@@ -1,43 +1,56 @@
 /* //////// MAIN APP /////////// */
 
 html,body{
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  font-family: 'Josefin Sans', sans-serif;
-  text-align: center;
+  /* margin: 0;
+  padding: 0; */
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* text-align: center; */
+
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #232526;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* margin: 0;
+  padding: 0; */
+  /* background: #232526;
+  /* background: -webkit-linear-gradient(to right, #414345, #232526);  */
+  /* background: linear-gradient(to right, #414345, #232526);  */
 }
 
 h1 {
   padding: 0px;
   margin: 0px;
-  font-size: 70px;
-  font-weight: 600;
-}
-
-.h1-white {
-  color: white;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  font-size: 5em;
 }
 
 h2 {
-  padding-top: 20px;
-  margin: 0px;
-  font-size: 60px;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  line-height: 1.4;
+  letter-spacing: .1em;
 }
 
 h3 {
-  padding: 0px;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.6em;
+  /* line-height: 1.8; */
+}
 
-  font-size: 30px;
-  font-weight: 400;
+h4 {
+  font-weight: 300;
+  font-size: 1.4em;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.5;
+  letter-spacing: .2em;
 }
 
 a:link {
@@ -63,25 +76,25 @@ a:active {
   text-align: center;
   color: white;
   margin: 2px 0 2px 0;
-  height: 7vh;
+  height: 10vh;
   background-color: #282828;
+}
+
+.div-spacer {
+  height: 10vh;
 }
 /* //////// END MAIN APP /////////// */
 
 /* ////// LANDING COMPONENT /////// */
-
-.body-header {
-  color: white;
-}
-
 .landing-header {
   background-color: #282828;
-  height: 80vh;
+  height: 85vh;
+  text-align: left;
 }
 
 .landing-image {
-  height: 90%;
-  width: 90%;
+  /* height: 90%;
+  width: 90%; */
 }
 
 .category-land {
@@ -89,7 +102,7 @@ a:active {
   padding: 0px;
   width:100vw;
   text-align: center;
-  display: inline-block;
+  /* display: inline-block; */
   background: #649173;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #DBD5A4, #649173);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #DBD5A4, #649173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -149,12 +162,12 @@ a:active {
   margin: 0px;
   padding: 0px;
   width:100vw;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .dino-text {
   width: 50%;
-  display: inline-block;
+  /* display: inline-block; */
 }
 /* ////// END DETAILS COMPONENT /////// */
 
