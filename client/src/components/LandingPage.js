@@ -18,11 +18,20 @@ class LandingPage extends Component {
     }
     return(
 
-      <div className="body">
-        <h1 className="body-header">DINO ESCORT</h1>
-        <h3 className="body-header">By land, by sea, by air: here for all your transport needs</h3>
+      <div className="body row">
 
 
+        <div className="col s12 landing-header valign-wrapper">
+          <div className="col s5">
+            <h1 className="">DINO ESCORT</h1>
+            <h3 className="">By land, by sea, by air: here for all your transport needs</h3>
+          </div>
+          <div className="col s7 right-align">
+            <img className="responsive-img landing-image" src={this.props.headerDino} />
+          </div>
+        </div>
+
+        <div className="col s12">
         <div className="category-land">
 
           <h2>LAND TRANSPORT</h2>
@@ -133,6 +142,7 @@ class LandingPage extends Component {
 
           </div>
 
+        </div>
         </div>
 
       </div>

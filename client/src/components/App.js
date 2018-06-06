@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Home} from './Home';
+
 import Details from './Details';
 import Cart from './Cart';
 import Congrats from './Congrats';
@@ -18,6 +18,7 @@ import dino6img from "../img/dino-pteranodon.png";
 import dino7img from "../img/dino-shastasaurus.png";
 import dino8img from "../img/dino-opthalmusaurus.png";
 import dino9img from "../img/dino-mosasurus.png";
+import headerDino from '../img/header-dino.png';
 
 import {UserProfile} from './UserProfile';
 import axios from 'axios';
@@ -218,8 +219,9 @@ class App extends Component {
   render() {
 
     let theUser = this.state.user
-    if (typeof theUser === 'object' && Object.keys(theUser).length > 0){
-      return(
+        return (
+
+
         <div>
           <Router>
             <div>
@@ -229,12 +231,14 @@ class App extends Component {
               <Route exact path='/' component={()=> (
                 <LandingPage
                   dinos={dinos}
+                  headerDino={headerDino}
                   detailClick={this.handleDetailClick}
                   redirectD={this.state.redirectDetail}
                   redirectC={this.state.redirectCart}
 
                 />)}
               />
+
               <Route path='/cart' component={()=> (
                 <Cart
                   cart={this.state.cart}
@@ -244,6 +248,7 @@ class App extends Component {
                   bookClick={this.bookClick}
                 />)}
               />
+
               <Route path='/detail' component={()=> (
                 <Details
                   dino={this.state.current}
@@ -251,17 +256,13 @@ class App extends Component {
                   redirectC={this.state.redirectCart}
                 />)}
               />
+
+
             </div>
           </Router>
         </div>
       )
-    } else {
-      return (
-        <div className="App">
-          <Home liftToken={this.liftTokenToState} />
-        </div>
-      )
-    }
+
   }
 }
 

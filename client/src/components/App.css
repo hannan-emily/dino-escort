@@ -1,13 +1,11 @@
-.App {
-  text-align: center;
-}
+/* //////// MAIN APP /////////// */
 
 html,body{
   margin: 0;
   padding: 0;
+  width: 100vw;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
-
 }
 
 body {
@@ -16,7 +14,6 @@ body {
   background: #232526;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 h1 {
@@ -24,6 +21,10 @@ h1 {
   margin: 0px;
   font-size: 70px;
   font-weight: 600;
+}
+
+.h1-white {
+  color: white;
 }
 
 h2 {
@@ -58,19 +59,29 @@ a:active {
     color: white;
   }
 
+.nav {
+  text-align: center;
+  color: white;
+  margin: 2px 0 2px 0;
+  height: 7vh;
+  background-color: #282828;
+}
+/* //////// END MAIN APP /////////// */
+
+/* ////// LANDING COMPONENT /////// */
+
 .body-header {
   color: white;
 }
 
-.nav {
-  text-align: center;
-  color: white;
-  margin: 5px 0 5px 0;
-  height: 20px;
+.landing-header {
+  background-color: #282828;
+  height: 80vh;
 }
 
-.h1-white {
-  color: white;
+.landing-image {
+  height: 90%;
+  width: 90%;
 }
 
 .category-land {
@@ -105,10 +116,11 @@ a:active {
   background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+/* ////// END LANDING COMPONENT /////// */
 
+/* ////// DETAILS COMPONENT /////// */
  .dino-div-details {
   color: white;
-
 }
 
 .dinocard {
@@ -144,13 +156,17 @@ a:active {
   width: 50%;
   display: inline-block;
 }
+/* ////// END DETAILS COMPONENT /////// */
 
+/* ////// CART COMPONENT /////// */
 .cart-image {
   height: 400px;
 }
 .underline {
   border-bottom: 1px solid black;
 }
+
+/* ////// END CART COMPONENT /////// */
 
 /* .background-home {
   z-index: 0;
@@ -174,7 +190,7 @@ object-fit: cover;
 .home-title{
   color:white;
 }
-.home-page {
+.home-COMPONENT {
   background-image: url('https://www.universetoday.com/wp-content/uploads/2010/10/pangea.jpg');
   background-size: contain;
   background-repeat: no-repeat;
