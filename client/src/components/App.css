@@ -5,14 +5,14 @@ html,body{
   padding: 0; */
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  /* text-align: center; */
+  text-align: center;
 
 }
 
 body {
   /* margin: 0;
   padding: 0; */
-  /* background: #232526;
+  background-color: #282828;
   /* background: -webkit-linear-gradient(to right, #414345, #232526);  */
   /* background: linear-gradient(to right, #414345, #232526);  */
 }
@@ -23,6 +23,10 @@ h1 {
   font-weight: 700;
   font-family: 'Playfair Display', serif;
   font-size: 5em;
+}
+
+.h1-category {
+  font-size: 4em !important;
 }
 
 h2 {
@@ -37,7 +41,7 @@ h3 {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 1.6em;
-  /* line-height: 1.8; */
+  line-height: 1.4;
 }
 
 h4 {
@@ -48,7 +52,7 @@ h4 {
 h5 {
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.5;
   letter-spacing: .2em;
 }
@@ -78,23 +82,56 @@ a:active {
   margin: 2px 0 2px 0;
   height: 10vh;
   background-color: #282828;
+  box-shadow: none !important;
 }
 
 .div-spacer {
   height: 10vh;
 }
+
 /* //////// END MAIN APP /////////// */
 
 /* ////// LANDING COMPONENT /////// */
 .landing-header {
   background-color: #282828;
-  height: 85vh;
+  min-height: 80vh;
+  margin: 2% 0 2% 0;
   text-align: left;
 }
 
 .landing-image {
   /* height: 90%;
   width: 90%; */
+}
+
+.landing-banner {
+  margin: 2%;
+  height: 15vh;
+  width: 100%;
+}
+
+.category-header-land {
+  height: 50vh;
+  background-image: url("../img/header-land.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
+}
+
+.category-header-air {
+  height: 50vh;
+  background-image: url("../img/header-air.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
+}
+
+.category-header-water {
+  height: 50vh;
+  background-image: url("../img/header-water.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
 }
 
 .category-land {
